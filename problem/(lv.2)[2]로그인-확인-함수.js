@@ -10,7 +10,15 @@
  */
 
 // TODO: loginRequest 함수를 작성하세요.
-async function loginRequest(id, pw) {}
+async function loginRequest(id, pw) {
+    new Promise(()=>{
+        if(id=="admin"&&pw=="1234"){
+            resolve( "ok");
+        }
+        else{resolve("fail");} 
+    })//new promise 하고... return 대신에 resolve 사용...? 
+        //오답
+}
 
 // export를 수정하지 마세요.
 export { loginRequest };

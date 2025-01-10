@@ -9,7 +9,12 @@
  */
 
 // TODO: delay 함수를 작성하세요.
-async function delay(ms) {}
+async function delay(ms) { 
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{resolve("done")},ms)
+    }) 
+//정답
+}
 
 // export를 수정하지 마세요.
 export { delay };
