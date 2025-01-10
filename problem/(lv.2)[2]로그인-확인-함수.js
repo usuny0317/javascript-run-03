@@ -11,13 +11,17 @@
 
 // TODO: loginRequest 함수를 작성하세요.
 async function loginRequest(id, pw) {
-    new Promise(()=>{
+    return new Promise((resolve)=>{
         if(id=="admin"&&pw=="1234"){
-            resolve( "ok");
+            resolve("ok");
         }
         else{resolve("fail");} 
-    })//new promise 하고... return 대신에 resolve 사용...? 
-        //오답
+    })
+    //new promise 하고... return 대신에 resolve 사용...? 
+        //오답 완료!!
+        //1. retrun new.. 인데, return 하지 않아서 반환을 안해줌
+        //2. resolve를 괄호 안에 작성하지 않아서, resolve(ok)랑 resolve(fail)제대로 동작 xx 
+        //return new Promise((resolve)=>{}) 형태 잊지 말것!!!!
 }
 
 // export를 수정하지 마세요.

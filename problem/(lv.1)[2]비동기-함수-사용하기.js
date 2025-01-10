@@ -21,11 +21,11 @@ async function fetchUsers() {
 
 // TODO: getUsers 함수를 작성하세요.
 async function getUsers() {
-  let list;
   const user= await fetchUsers();
-  user.map()
+
  //map 써서 이름만 리턴하기
-  return list;
+  return user.map((item)=>item.name);
+  //오답 완료!
 }
 
 // export를 수정하지 마세요.

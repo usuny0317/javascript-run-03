@@ -10,7 +10,7 @@
 
 // TODO: delay 함수를 작성하세요.
 async function delay(ms) { 
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve)=>{
         setTimeout(()=>{resolve("done")},ms)
     }) 
 //정답

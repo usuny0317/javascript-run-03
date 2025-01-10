@@ -16,14 +16,10 @@
  * });
  */
 async function parallelRequests(promise1, promise2) {
-    try{
-        return await Promise.all(
-            [fetch(promise1).then(res => res.json()),
-            fetch(promise2).then(res => res.json())]
-        )
-    }catch(err){
-        console.log("에러났어요")
-    }
+
+    return await Promise.all([promise1,promise2]);
+        //이것도 문법이래! 형태 외워기!
+        //오답 완료!!
 }
 
 // export를 수정하지 마세요.
