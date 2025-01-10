@@ -12,7 +12,10 @@
  */
 
 async function timeOut(promise, ms) {
-    return new Promise.race(promise,ms)
+    const timeout = new Promise((_, reject)=>{
+        setTimeout(()=>{reject("timeout")},ms);
+    })
+    return Promise.race([promise,timeout]);
     //둘 중 하나 race 해서 프로미스하고 ms 레이스가 먼데
 }
 //
